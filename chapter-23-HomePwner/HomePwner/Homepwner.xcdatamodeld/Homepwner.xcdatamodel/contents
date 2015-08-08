@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="14C1514" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BNRAssetType" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BNRItem" inverseName="assetType" inverseEntity="BNRItem" syncable="YES"/>
+    </entity>
+    <entity name="BNRItem" representedClassName="BNRItem" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="itemKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderingValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Transformable" valueTransformerName="BNRImageTransformer" syncable="YES"/>
+        <attribute name="valueInDollars" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="assetType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BNRAssetType" inverseName="items" inverseEntity="BNRAssetType" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BNRItem" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="BNRAssetType" positionX="-54" positionY="45" width="128" height="73"/>
+    </elements>
+</model>
